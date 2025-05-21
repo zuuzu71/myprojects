@@ -1,5 +1,3 @@
-/* Basic Reset */
-
 * {
   margin: 0;
   padding: 0;
@@ -7,26 +5,24 @@
 }
 
 body {
-  background: #f5efe6;
+  background: linear-gradient(to right, #fceabb, #f8b500);
+  font-family: "Segoe UI", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   padding: 1rem;
-  font-family: sans-serif;
 }
 
 .container {
   background-color: white;
-  border-radius: 1rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 1.5rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
   width: 100%;
-  max-width: 600px;
+  max-width: 650px;
   overflow: hidden;
-  position: relative;
 }
 
-/* SCREENS */
 .screen {
   display: none;
   padding: 2rem;
@@ -38,140 +34,127 @@ body {
 }
 
 /* START SCREEN */
-
-#start-screen h1 {
-  color: #e86a33;
-  margin-bottom: 20px;
+#start-screen h1,
+#result-screen h1 {
+  color: #f57c00;
   font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
 #start-screen p {
-  color: #666;
+  color: #555;
   margin-bottom: 30px;
   font-size: 1.1rem;
 }
 
+/* QUESTION */
 .quiz-header {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 #question-text {
+  font-size: 1.6rem;
+  font-weight: 600;
   color: #333;
-  font-size: 1.5rem;
   margin-bottom: 1rem;
-  line-height: 1.4;
 }
 
 .quiz-info {
   display: flex;
   justify-content: space-between;
-  color: #666;
-  margin-bottom: 10px;
+  color: #888;
+  font-size: 1rem;
 }
 
 .answers-container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
+  margin-top: 20px;
   margin-bottom: 25px;
 }
 
 .answer-btn {
-  background-color: #f8f0e5;
+  background-color: #fff7e6;
+  border: 2px solid #ffd699;
   color: #333;
-  border: 2px solid #eadbc8;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 1rem;
-  cursor: pointer;
   text-align: left;
+  font-size: 1rem;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .answer-btn:hover {
-  background-color: #eadbc8;
-  border-color: #dac0ae;
+  background-color: #ffe0b2;
 }
 
 .answer-btn.correct {
-  background-color: #e6fff0;
-  border-color: #a3f0c4;
-  color: #28a745;
+  background-color: #e0f7fa;
+  border-color: #4dd0e1;
+  color: #00796b;
 }
 
 .answer-btn.incorrect {
-  background-color: #fff0f0;
-  border-color: #ffbdbd;
-  color: #dc3545;
+  background-color: #ffebee;
+  border-color: #ef9a9a;
+  color: #c62828;
 }
 
+/* Progress bar */
 .progress-bar {
   height: 10px;
-  background-color: #f8f0e5;
+  background-color: #ffe0b2;
   border-radius: 5px;
   overflow: hidden;
-  margin-top: 20px;
 }
 
 .progress {
   height: 100%;
-  background-color: #e86a33;
+  background-color: #f57c00;
   width: 0%;
   transition: width 0.3s ease;
 }
 
-/* RESULT SCREEN */
-
-#result-screen h1 {
-  color: #e86a33;
-  margin-bottom: 30px;
-}
-
+/* RESULT */
 .result-info {
-  background-color: #f8f0e5;
-  border-radius: 10px;
+  background-color: #fff3e0;
   padding: 20px;
-  margin-bottom: 30px;
+  border-radius: 12px;
+  margin-bottom: 25px;
 }
 
 .result-info p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #333;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 
 #result-message {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #e86a33;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #f57c00;
 }
 
+/* BUTTONS */
 button {
-  background-color: #e86a33;
+  background-color: #f57c00;
   color: white;
   border: none;
   border-radius: 10px;
-  padding: 15px 30px;
+  padding: 14px 28px;
   font-size: 1.1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #d45b28;
+  background-color: #ef6c00;
 }
 
-/* RESPONSIVE DESIGN */
+/* RESPONSIVE */
 @media (max-width: 500px) {
-  /* when we hit 500px and below, implement the styles below */
-
-  .screen {
-    padding: 1rem;
-  }
-
-  #start-screen h1 {
-    font-size: 2rem;
-  }
-
   #question-text {
     font-size: 1.3rem;
   }
@@ -181,7 +164,7 @@ button:hover {
   }
 
   button {
-    padding: 12px 25px;
+    padding: 12px 24px;
     font-size: 1rem;
   }
 }

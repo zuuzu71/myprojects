@@ -16,51 +16,97 @@ const progressBar = document.getElementById("progress");
 
 const quizQuestions = [
   {
-    question: "What is the capital of France?",
+    question: "Waa maxay caasimadda Soomaaliya?",
     answers: [
-      { text: "London", correct: false },
-      { text: "Berlin", correct: false },
-      { text: "Paris", correct: true },
-      { text: "Madrid", correct: false },
+      { text: "Mogadishu", correct: true },
+      { text: "Hargeisa", correct: false },
+      { text: "Kismaayo", correct: false },
+      { text: "Garoowe", correct: false },
     ],
   },
   {
-    question: "Which planet is known as the Red Planet?",
+    question: "Waa maxay afka rasmiga ah ee Soomaaliya?",
     answers: [
-      { text: "Venus", correct: false },
-      { text: "Mars", correct: true },
-      { text: "Jupiter", correct: false },
-      { text: "Saturn", correct: false },
+      { text: "Af-Ingiriisi", correct: false },
+      { text: "Af-Soomaali", correct: true },
+      { text: "Af-Carabi", correct: false },
+      { text: "Af-Fransiis", correct: false },
     ],
   },
   {
-    question: "What is the largest ocean on Earth?",
+    question: "Waa maxay magaca geedka laga helo malabka?",
     answers: [
-      { text: "Atlantic Ocean", correct: false },
-      { text: "Indian Ocean", correct: false },
-      { text: "Arctic Ocean", correct: false },
-      { text: "Pacific Ocean", correct: true },
+      { text: "Dhabarka", correct: false },
+      { text: "Shinni", correct: true },
+      { text: "Qoryo", correct: false },
+      { text: "Dacar", correct: false },
     ],
   },
   {
-    question: "Which of these is NOT a programming language?",
+    question: "Waa maxay magaca ubaxa qaran ee Soomaaliya?",
     answers: [
-      { text: "Java", correct: false },
-      { text: "Python", correct: false },
-      { text: "Banana", correct: true },
-      { text: "JavaScript", correct: false },
+      { text: "Xabxab", correct: false },
+      { text: "Geed-hoor", correct: false },
+      { text: "Toor", correct: false },
+      { text: "Damis", correct: true },
     ],
   },
   {
-    question: "What is the chemical symbol for gold?",
+    question: "Waa maxay magaca webiga ugu dheer Soomaaliya?",
     answers: [
-      { text: "Go", correct: false },
-      { text: "Gd", correct: false },
-      { text: "Au", correct: true },
-      { text: "Ag", correct: false },
+      { text: "Webiga Jubba", correct: true },
+      { text: "Webiga Shabeelle", correct: false },
+      { text: "Webiga Nile", correct: false },
+      { text: "Webiga Omo", correct: false },
+    ],
+  },
+  {
+    question: "Waa maxay magaca dabaysha ugu badan Soomaaliya?",
+    answers: [
+      { text: "Dabaylaha Xagaa", correct: true },
+      { text: "Dabaylaha Gu’", correct: false },
+      { text: "Dabaylaha Jiilaal", correct: false },
+      { text: "Dabaylaha Qaboobaha", correct: false },
+    ],
+  },
+  {
+    question: "Waa maxay magaca dhaqanka Soomaalida ee lagu cunno rootiga macaan?",
+    answers: [
+      { text: "Canjeero", correct: true },
+      { text: "Injera", correct: false },
+      { text: "Chapati", correct: false },
+      { text: "Pita", correct: false },
+    ],
+  },
+  {
+    question: "Waa maxay magaca ubax dhalaala oo Soomaaliyeed?",
+    answers: [
+      { text: "Ubax-guduud", correct: false },
+      { text: "Ubax-cadde", correct: false },
+      { text: "Ubax-baruur", correct: false },
+      { text: "Ubax-buluug", correct: true },
+    ],
+  },
+  {
+    question: "Waa maxay magaca ciyaarta dhaqanka ee Soomaalida?",
+    answers: [
+      { text: "Shax", correct: true },
+      { text: "Chess", correct: false },
+      { text: "Ludo", correct: false },
+      { text: "Domino", correct: false },
+    ],
+  },
+  {
+    question: "Waa maxay magaca xeebta ugu dheer Soomaaliya?",
+    answers: [
+      { text: "Xeebta Berbera", correct: false },
+      { text: "Xeebta Muqdisho", correct: false },
+      { text: "Xeebta Kismaayo", correct: true },
+      { text: "Xeebta Bosaso", correct: false },
     ],
   },
 ];
+
 
 // QUIZ STATE VARS
 let currentQuestionIndex = 0;
