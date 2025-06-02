@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Tasks</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+</head>
+<body>
+  <div class="todo-app">
+    <div class="header">
+      <h2><i class="fa-solid fa-check"></i> My Tasks </h2>
+      <p id="date"></p>
+    </div>
+
+    <form id="todo-form">
+      <input type="text" id="todo-input" placeholder="What do you need to do?" required />
+     <button type="submit"><i class="fa-solid fa-plus"></i></button>
+    </form>
+
+    <div class="filters">
+      <button data-filter="all" class="filter-btn active">All</button>
+      <button data-filter="active" class="filter-btn">Active</button>
+      <button data-filter="completed" class="filter-btn">Completed</button>
+    </div>
+
+   <ul id="todo-list" class="todo-list"></ul>
+   <div id="empty-state" class="empty-state">No tasks here yet</div>
+
+
+    <div class="footer">
+      <span id="items-left">0 items left</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
